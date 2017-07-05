@@ -120,6 +120,7 @@ namespace Trie
 
         public void OrderNodes()
         {
+            Leafs.ForEach(leaf => leaf.OrderNodes());
             Leafs = Leafs.OrderBy(arg => arg.Value).ToList();
         }
         
